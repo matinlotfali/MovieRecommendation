@@ -1,0 +1,25 @@
+﻿<Window x:Class="MovieRecommendation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieRecommendation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="380.273" Width="753.185" WindowStartupLocation="CenterScreen" IsEnabled="False" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-6.6,-19.6" HorizontalAlignment="Left" Width="753">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="progressLabel" Content="Loading..." HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="26" Width="423"/>
+        <ProgressBar Name="progressBar" HorizontalAlignment="Right" Height="15" VerticalAlignment="Top" Width="683" Margin="0,45,21.8,0"/>
+        <Label Content="Your User ID : " HorizontalAlignment="Left" Margin="20,61,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
+        <TextBox Name="UserID" HorizontalAlignment="Left" Height="23" Margin="105,65,0,0" VerticalAlignment="Top" Width="65"/>
+        <CheckBox Name="hashCheckbox" Content="Use Hashes in Calculations" IsChecked="True" HorizontalAlignment="Left" Margin="293,67,0,0" VerticalAlignment="Top" Height="15" Width="161"/>
+        <Button Content="Recommend By Ratings" HorizontalAlignment="Left" Width="150" Margin="48,93,0,0" VerticalAlignment="Top" Height="23" Click="RateButton_Click"/>
+        <Button Content="Recommend By Genres" HorizontalAlignment="Left" Width="150" Margin="293,93,0,0" VerticalAlignment="Top" Height="23" Click="MovieButton_Click"/>
+        <Button Content="Recommend By Ratings &amp; Genres" HorizontalAlignment="Left" Width="200" Margin="508,93,0,0" VerticalAlignment="Top" Height="23" Click="MovieRateButton_Click"/>
+        <ListBox Name="MovieList" Height="183" VerticalAlignment="Top" Margin="20,124,17.8,0"/>
+        <Label Name="timeLabel" Content="" HorizontalAlignment="Right" Margin="0,61,16.8,0" VerticalAlignment="Top" Height="26" Width="10"/>
+    </Grid>
+</Window>
